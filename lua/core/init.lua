@@ -74,9 +74,13 @@ local disable_distribution_plugins = function()
 end
 
 local leader_map = function()
-	vim.g.mapleader = " "
+	vim.g.mapleader = ","
 	vim.api.nvim_set_keymap("n", " ", "", { noremap = true })
 	vim.api.nvim_set_keymap("x", " ", "", { noremap = true })
+	vim.keymap.set("n", "J", "10j")
+	vim.keymap.set("n", "K", "10k")
+	vim.keymap.set("n", "H", "^")
+	vim.keymap.set("n", "L", "$")
 end
 
 local gui_config = function()
